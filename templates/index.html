@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Resume ATS Scanner</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+
+        .container{
+            width: 500px;
+            margin: auto;
+            margin-top: 100px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        input, select{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button{
+            background: blue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: darkblue;
+        }
+
+        .note{
+            color: red;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Resume ATS Scanner</h1>
+
+    <form action="/scan"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <label>Upload Resume(s)</label>
+
+        <br><br>
+
+        <input type="file"
+               name="resume"
+               accept=".pdf,.txt"
+               required>
+
+        <p class="note">
+            Only PDF and TXT files allowed
+        </p>
+
+        <br>
+
+        <label>Select Job Role</label>
+
+        <br><br>
+
+        <select name="job_role" required>
+
+            <option value="">
+                Select Role
+            </option>
+
+            <option value="python_developer">
+                Python Developer
+            </option>
+
+            <option value="frontend_developer">
+                Frontend Developer
+            </option>
+
+            <option value="data_scientist">
+                Data Scientist
+            </option>
+
+            <option value="java_developer">
+                Java Developer
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Scan Resume
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

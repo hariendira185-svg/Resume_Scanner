@@ -1,0 +1,7 @@
+resume/
+venv/
+.env
+.git/
+uploads/
+__pycache__/
+*.pyc
